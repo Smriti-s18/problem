@@ -161,7 +161,7 @@ def login():
                 user.type = user_data['username']  # Assuming you have a 'username' column in your customer table
                 login_user(user)
                 login_successful = True  # Set login status to True when login is successful
-                return redirect(url_for('page1'))
+                return redirect("https://smriti-s18.github.io/problem/page1")
         
         # If the username or password is incorrect, set login status to False
         login_successful = False
