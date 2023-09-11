@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather and More</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffebcd; /* Light peach background */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ffa07a; /* Coral background */
+            color: #fff;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .container {
+            background-color: #fff; /* White container background */
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .view-more-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #ff69b4; /* Hot pink button */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        /* Add cute emojis to the links */
+        .view-more-link::before {
+            content: "\1F33D"; /* Sunflower emoji */
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Hello! 🧑‍🌾
+    </header>
+
+    <div class="container">
+        <!-- Weather Section -->
+        <!-- Add your weather section content here -->
+
+        <a href="{{ url_for('cropdisease') }}" class="view-more-link">Crop Diseases 🌾</a>
+        <a href="{{ url_for('customer') }}" class="view-more-link">Customer Details 👥</a>
+    </div>
+</body>
+</html>

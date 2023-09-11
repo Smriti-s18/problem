@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>List of Farmers for Restaurants</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #ffd700; /* Gold background */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff69b4; /* Hot pink header background */
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            border-bottom: 5px solid #ff1493; /* Deep pink border */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+            background-color: #fff; /* White container background */
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .farmer-list {
+            list-style: none;
+            padding: 0;
+        }
+        .farmer-item {
+            background-color: #ffebcd; /* Light peach item background */
+            border: 1px solid #ff69b4; /* Hot pink border */
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .farmer-details {
+            flex: 1;
+        }
+        .farmer-contact {
+            color: #ff1493; /* Deep pink contact text color */
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        .farmer-location {
+            color: #555;
+        }
+        /* Add cute emojis to the contact */
+        .farmer-contact::before {
+            content: "\1F60D"; /* Smiling face with heart-shaped eyes emoji */
+            margin-right: 5px;
+        }
+        /* Add cute emojis to the location */
+        .farmer-location::before {
+            content: "\1F33D"; /* Sunflower emoji */
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>List of Farmers for Restaurants 🍽️</h1>
+    </header>
+    <div class="container">
+        <ul class="farmer-list">
+            {% for farmer in farmers %}
+            <li class="farmer-item">
+                <div class="farmer-details">
+                    <p class="farmer-contact">Contact: {{ farmer[1] }}</p>
+                    <p class="farmer-location">Location: {{ farmer[2] }}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

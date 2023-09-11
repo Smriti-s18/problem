@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Our Organic Marketplace</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            margin: 0;
+            padding: 0;
+            background-color: #ffd700; /* Gold background */
+        }
+        header {
+            background-color: #ff69b4; /* Hot pink header background */
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2em;
+            background-color: #fff; /* White container background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            padding: 2em;
+            border: 1px solid #ddd;
+            margin-bottom: 1em;
+            background-color: #ffebcd; /* Light peach section background */
+            border-radius: 10px;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #ff6347; /* Tomato red heading color */
+        }
+        .nav {
+            text-align: center;
+            margin-top: 1em;
+        }
+        .nav a {
+            display: block;
+            margin: 10px 0;
+            color: #ff4500; /* Orangered link color */
+            text-decoration: none;
+            font-size: 18px;
+        }
+        /* Add cute emojis to the links */
+        .nav a::before {
+            content: "\1F60D"; /* Smiling face with heart-shaped eyes emoji */
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Organic Marketplace 🌼</h1>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2>Discover Fresh Organic Produce 🌱</h2>
+            <p>Connect directly with local farmers and enjoy the freshest organic crops! 🥕🍅</p>
+        </div>
+        <div class="nav">
+            <a href="{{ url_for('buyers') }}">View Farmers for Schools, Universities, Individuals 😊</a>
+            <a href="{{ url_for('restaurants') }}">Restaurants & Buyers 😋</a>
+            <a href="{{ url_for('food_banks') }}">Food Banks 🥫</a>
+            <a href="{{ url_for('farm') }}">Farmers Page 🚜</a>
+        </div>
+    </div>
+</body>
+</html>

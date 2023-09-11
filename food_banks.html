@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>List of Food Donations for Food Banks</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #ffebcd; /* Light peach background */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff69b4; /* Hot pink header background */
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            border-bottom: 5px solid #ff1493; /* Deep pink border */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+            background-color: #fff; /* White container background */
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .food-bank-list {
+            list-style: none;
+            padding: 0;
+        }
+        .food-bank-item {
+            background-color: #f3e491; /* Gold item background */
+            border: 1px solid #ff69b4; /* Hot pink border */
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .food-bank-details {
+            flex: 1;
+        }
+        .food-bank-donor {
+            color: #ff1493; /* Deep pink donor text color */
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        .food-bank-item-description {
+            color: #555;
+        }
+        /* Add cute emojis to the donor */
+        .food-bank-donor::before {
+            content: "\1F44D"; /* Thumbs up emoji */
+            margin-right: 5px;
+        }
+        /* Add cute emojis to the item description */
+        .food-bank-item-description::before {
+            content: "\1F372"; /* Food emoji */
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>List of Food Donations for Food Banks 🍽️</h1>
+    </header>
+    <div class="container">
+        <ul class="food-bank-list">
+            {% for food_bank in food_banks %}
+            <li class="food-bank-item">
+                <div class="food-bank-details">
+                    <p class="food-bank-donor">Donor: {{ food_bank[1] }}</p>
+                    <p class="food-bank-item-description">Food Item: {{ food_bank[2] }}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
